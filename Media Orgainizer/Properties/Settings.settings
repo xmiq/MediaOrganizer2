@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Media_Orgainizer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EmergencyServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://dl.dropboxusercontent.com/u/17081468/Applications/Media%20Organizer%202/Servers.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

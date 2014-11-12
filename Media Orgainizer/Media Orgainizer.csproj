@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DB6577B-7498-4329-9C78-4E234AD49A5C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Media_Orgainizer</RootNamespace>
+    <AssemblyName>Media Organizer 2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Data\Book.cs" />
+    <Compile Include="Classes\Data\Anime.cs" />
+    <Compile Include="Classes\Data\Music.cs" />
+    <Compile Include="Classes\Data\Manga.cs" />
+    <Compile Include="Classes\Data\DataItem.cs" />
+    <Compile Include="Classes\Data\MediaItem.cs" />
+    <Compile Include="Classes\GUI\Anime Control.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GUI\Anime Control.Designer.cs">
+      <DependentUpon>Anime Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GUI\Book Control.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GUI\Book Control.Designer.cs">
+      <DependentUpon>Book Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GUI\Data Item Selector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GUI\Data Item Selector.Designer.cs">
+      <DependentUpon>Data Item Selector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GUI\Manga Control.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GUI\Manga Control.Designer.cs">
+      <DependentUpon>Manga Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GUI\Media Categories.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GUI\Media Categories.Designer.cs">
+      <DependentUpon>Media Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GUI\Media Control.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GUI\Media Control.Designer.cs">
+      <DependentUpon>Media Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GUI\Movie Control.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GUI\Movie Control.Designer.cs">
+      <DependentUpon>Movie Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GUI\Music Control.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GUI\Music Control.Designer.cs">
+      <DependentUpon>Music Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GUI\Other Settings Selector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GUI\Other Settings Selector.Designer.cs">
+      <DependentUpon>Other Settings Selector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GUI\Series Control.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GUI\Series Control.Designer.cs">
+      <DependentUpon>Series Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Data\Media.cs" />
+    <Compile Include="Classes\Data\Movie.cs" />
+    <Compile Include="Classes\GUI\StackingPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GUI\StackingPanel.Designer.cs">
+      <DependentUpon>StackingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Misc\ComboBoxItem.cs" />
+    <Compile Include="Classes\Misc\DataManagment.cs" />
+    <Compile Include="Classes\Data\Item.cs" />
+    <Compile Include="Classes\Data\Series.cs" />
+    <Compile Include="Classes\Misc\Updates.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Classes\GUI\Anime Control.resx">
+      <DependentUpon>Anime Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\GUI\Book Control.resx">
+      <DependentUpon>Book Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\GUI\Data Item Selector.resx">
+      <DependentUpon>Data Item Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\GUI\Manga Control.resx">
+      <DependentUpon>Manga Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\GUI\Media Categories.resx">
+      <DependentUpon>Media Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\GUI\Media Control.resx">
+      <DependentUpon>Media Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\GUI\Movie Control.resx">
+      <DependentUpon>Movie Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\GUI\Music Control.resx">
+      <DependentUpon>Music Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\GUI\Other Settings Selector.resx">
+      <DependentUpon>Other Settings Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\GUI\Series Control.resx">
+      <DependentUpon>Series Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\GUI\StackingPanel.resx">
+      <DependentUpon>StackingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowL.png" />
+    <None Include="Resources\ArrowR.png" />
+    <None Include="Resources\series.png" />
+    <None Include="Resources\501249.png" />
+    <None Include="Resources\main.png" />
+    <None Include="Resources\h_o_t_d___anime_icon_v2_by_devill_dante-d38e98f.png" />
+    <None Include="Resources\itunes_anime_icon_by_brokentou.png" />
+    <None Include="Resources\one_piece_iphone_icon_by_ceventhjy-d4cxp7a.png" />
+    <None Include="Resources\5cce6edb6c48.png" />
+    <None Include="Resources\system-software-update.png" />
+    <None Include="Resources\Crystal_Project_Save_all.png" />
+    <None Include="Resources\Export-icon.png" />
+    <None Include="Resources\import-icon.png" />
+    <None Include="Resources\3884.png" />
+    <None Include="Resources\12270166-grey-metallic-texture-as-a-background.jpg" />
+    <Content Include="Servers.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
